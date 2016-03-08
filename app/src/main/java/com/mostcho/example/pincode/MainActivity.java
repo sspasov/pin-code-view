@@ -1,12 +1,11 @@
-package com.mostcho.pincodeview.ui.activities;
+package com.mostcho.example.pincode;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-import com.mostcho.pincodeview.R;
-import com.mostcho.pincodeview.ui.views.PinCodeView;
+import com.mostcho.pincodeview.PinCodeView;
 
 public class MainActivity extends AppCompatActivity implements PinCodeView.IPinCodeViewListener {
 

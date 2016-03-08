@@ -1,4 +1,4 @@
-package com.mostcho.pincodeview.ui.views;
+package com.mostcho.pincodeview;
 
 import android.content.Context;
 import android.content.res.Resources;
