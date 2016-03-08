@@ -7,7 +7,19 @@ Android view that provides pin code functionality
 <img src="./screens/correct_pin.png" width="240"/>
 
 ## How to use:
-* Import the project into your project or just copy the view class. It is located in the [```com.mostcho.pincodeview.ui.views.PinCodeView```](https://github.com/sspasov/pin-code-view/blob/master/app/src/main/java/com/mostcho/pincodeview/ui/views/PinCodeView.java)
+* Import the project into your project. 
+    * Copy the folder ```pincodeview``` into your project folder.
+    * Add the folowing line of code into your ```settings.gradle```
+    ```xml
+        include ':pincodeview'
+    ```
+    * Add the folowind line of code into your project ```build.gradle``` dependencies
+    ```xml
+        dependencies {
+            compile fileTree(dir: 'libs', include: ['*.jar'])
+            compile project(path: ':pincodeview')
+        }
+    ```
 
 * Your layout should look like 
 ```xml
@@ -18,7 +30,7 @@ Android view that provides pin code functionality
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray">
 
-    <com.mostcho.pincodeview.ui.views.PinCodeView
+    <com.mostcho.pincodeview.PinCodeView
         android:id="@+id/pin_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,6 +40,8 @@ Android view that provides pin code functionality
 ```
 * In your class you must find the view, set its pin modes and implement the completion listener
 ```java
+import com.mostcho.pincodeview.PinCodeView;
+
 public class MainActivity extends AppCompatActivity implements PinCodeView.IPinCodeViewListener {
 
     private PinCodeView pinCodeView;
